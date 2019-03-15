@@ -69,40 +69,14 @@ PowerShellVersion = '3.0'
 # FormatsToProcess = @()
 
 # Modules to import as nested modules of the module specified in RootModule/ModuleToProcess
-NestedModules = 'Internal/BaseURI.ps1',
-                'Internal/APIKey.ps1',
-                'Internal/ModuleSettings.ps1',
-                'Resources/ConfigurationInterfaces.ps1',
-                'Resources/Configurations.ps1',
-                'Resources/ConfigurationStatuses.ps1',
-                'Resources/ConfigurationTypes.ps1',
-                'Resources/Contacts.ps1',
-                'Resources/ContactTypes.ps1',
-                'Resources/Countries.ps1',
-                'Resources/FlexibleAssetFields.ps1',
-                'Resources/FlexibleAssets.ps1',
-                'Resources/FlexibleAssetTypes.ps1',
-                'Resources/Groups.ps1',
-                'Resources/Locations.ps1',
-                'Resources/Manufacturers.ps1',
-                'Resources/Models.ps1',
-                'Resources/OperatingSystems.ps1',
-                'Resources/Organizations.ps1',
-                'Resources/OrganizationStatuses.ps1',
-                'Resources/OrganizationTypes.ps1',
-                'Resources/PasswordCategories.ps1',
-                'Resources/Passwords.ps1',
-                'Resources/Platforms.ps1',
-                'Resources/Regions.ps1',
-                'Resources/UserMetrics.ps1',
-                'Resources/Users.ps1'
+# NestedModules = @()
 
 # Functions to export from this module
-FunctionsToExport = 'Add-ITGlueAPIKey',
+FunctionsToExport = 'Set-ITGlueAPIKey',
                     'Get-ITGlueAPIKey',
                     'Remove-ITGlueAPIKey',
 
-                    'Add-ITGlueBaseURI',
+                    'Set-ITGlueBaseURI',
                     'Get-ITGlueBaseURI',
                     'Remove-ITGlueBaseURI',
 

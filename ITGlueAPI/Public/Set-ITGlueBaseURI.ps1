@@ -1,8 +1,8 @@
-function Add-ITGlueBaseURI {
+function Set-ITGlueBaseURI {
     [cmdletbinding()]
     Param (
         [parameter(ValueFromPipeline)]
-        [string]$base_uri = 'https://api.itglue.com',
+        [string]$base_uri = 'https://api.eu.itglue.com',
 
         [Alias('locale','dc')]
         [ValidateSet( 'US', 'EU')]
@@ -20,15 +20,7 @@ function Add-ITGlueBaseURI {
         Default {}
     }
 
-    Set-Variable -Name "ITGlue_Base_URI" -Value $base_uri -Option ReadOnly -Scope global -Force
+    Set-Variable -Name "ITGlue_Base_URI" -Value $base_uri -Option ReadOnly -Scope script -Force
 }
 
-function Remove-ITGlueBaseURI {
-    Remove-Variable -Name "ITGlue_Base_URI" -Scope global -Force 
-}
-
-function Get-ITGlueBaseURI {
-    $ITGlue_Base_URI
-}
-
-New-Alias -Name Set-ITGlueBaseURI -Value Add-ITGlueBaseURI
+New-Alias -Name Add-ITGlueBaseURI -Value Set-ITGlueBaseURI
