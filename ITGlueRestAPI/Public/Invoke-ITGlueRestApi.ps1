@@ -45,11 +45,14 @@ Function Invoke-ITGlueRestAPI {
       Try {
         $Response = Invoke-RestMethod @Params
       }
-      Catch {}
+      Catch {Throw $_}
       $Result += $Response.data
       $Params['Uri'] = $Response.links.next
     }
     While ($Response.links.next)
   }
   
+  End {
+    Return $Result
+  }
 }
