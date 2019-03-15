@@ -33,7 +33,7 @@ If ($ParentCommand -like '*-Verbose*') {
   $VerbosePreference = 'Continue'
 }
 
-$Script:ITGlueApiUri = switch ($Region) {
+$ITGlueApiUri = switch ($Region) {
   'US' {'https://api.itglue.com'}
   'EU' {'https://api.eu.itglue.com'}
 }
@@ -41,7 +41,7 @@ $Script:ITGlueApiUri = switch ($Region) {
 # Create necessary headers and commit them as a default parameter to 
 # Invoke-RestMethod. Makes subsequent calls to API so much easier.
 # Must be written to Script context or it will not work.
-$Script:PSDefaultParameterValues = @{
+$PSDefaultParameterValues = @{
   'Invoke-RestMethod:Headers' = @{
     'x-api-key'    = $ApiKey
     'Content-Type' = 'application/vnd.api+json'
